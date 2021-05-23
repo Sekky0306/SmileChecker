@@ -16,6 +16,12 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>NSCameraUsageDescription</key>
+	<string>アプリ内で採点する画像をカメラから呼び出します</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>アプリ内で採点する画像をアルバムから呼び出します</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>
