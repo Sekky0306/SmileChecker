@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9F1508D6265A46D8005D0AFB /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1508D5265A46D8005D0AFB /* CheckViewController.swift */; };
 		9F1508D8265A46F2005D0AFB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1508D7265A46F2005D0AFB /* RegisterViewController.swift */; };
+		9F152155265EAA15009BC210 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9F152154265EAA15009BC210 /* Realm */; };
+		9F152157265EAA19009BC210 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9F152156265EAA19009BC210 /* RealmSwift */; };
+		9F152159265EACEC009BC210 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F152158265EACEB009BC210 /* TopicTableViewCell.swift */; };
 		9F15246A26594C4D00A24567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15246926594C4D00A24567 /* AppDelegate.swift */; };
 		9F15246C26594C4D00A24567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15246B26594C4D00A24567 /* SceneDelegate.swift */; };
 		9F15246E26594C4D00A24567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15246D26594C4D00A24567 /* ViewController.swift */; };
@@ -17,6 +20,7 @@
 		9F15247626594C5000A24567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F15247426594C5000A24567 /* LaunchScreen.storyboard */; };
 		9F15248126594C5000A24567 /* SmileCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15248026594C5000A24567 /* SmileCheckerTests.swift */; };
 		9F15248C26594C5000A24567 /* SmileCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15248B26594C5000A24567 /* SmileCheckerUITests.swift */; };
+		9FF8B37E265D559E00D8AF12 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8B37D265D559E00D8AF12 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,7 @@
 /* Begin PBXFileReference section */
 		9F1508D5265A46D8005D0AFB /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		9F1508D7265A46F2005D0AFB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9F152158265EACEB009BC210 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
 		9F15246626594C4D00A24567 /* SmileChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmileChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F15246926594C4D00A24567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F15246B26594C4D00A24567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 		9F15248726594C5000A24567 /* SmileCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmileCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F15248B26594C5000A24567 /* SmileCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileCheckerUITests.swift; sourceTree = "<group>"; };
 		9F15248D26594C5000A24567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF8B37D265D559E00D8AF12 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F152157265EAA19009BC210 /* RealmSwift in Frameworks */,
+				9F152155265EAA15009BC210 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +88,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F152153265EAA15009BC210 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F15245D26594C4D00A24567 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +102,7 @@
 				9F15247F26594C5000A24567 /* SmileCheckerTests */,
 				9F15248A26594C5000A24567 /* SmileCheckerUITests */,
 				9F15246726594C4D00A24567 /* Products */,
+				9F152153265EAA15009BC210 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +128,8 @@
 				9F15247226594C5000A24567 /* Assets.xcassets */,
 				9F15247426594C5000A24567 /* LaunchScreen.storyboard */,
 				9F15247726594C5000A24567 /* Info.plist */,
+				9FF8B37D265D559E00D8AF12 /* Data.swift */,
+				9F152158265EACEB009BC210 /* TopicTableViewCell.swift */,
 			);
 			path = SmileChecker;
 			sourceTree = "<group>";
@@ -150,6 +168,10 @@
 			dependencies = (
 			);
 			name = SmileChecker;
+			packageProductDependencies = (
+				9F152154265EAA15009BC210 /* Realm */,
+				9F152156265EAA19009BC210 /* RealmSwift */,
+			);
 			productName = SmileChecker;
 			productReference = 9F15246626594C4D00A24567 /* SmileChecker.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 9F15245D26594C4D00A24567;
+			packageReferences = (
+				9FF8B37C265D551A00D8AF12 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 9F15246726594C4D00A24567 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F15246E26594C4D00A24567 /* ViewController.swift in Sources */,
+				9FF8B37E265D559E00D8AF12 /* Data.swift in Sources */,
 				9F1508D8265A46F2005D0AFB /* RegisterViewController.swift in Sources */,
+				9F152159265EACEC009BC210 /* TopicTableViewCell.swift in Sources */,
 				9F1508D6265A46D8005D0AFB /* CheckViewController.swift in Sources */,
 				9F15246A26594C4D00A24567 /* AppDelegate.swift in Sources */,
 				9F15246C26594C4D00A24567 /* SceneDelegate.swift in Sources */,
@@ -605,6 +632,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FF8B37C265D551A00D8AF12 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F152154265EAA15009BC210 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF8B37C265D551A00D8AF12 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		9F152156265EAA19009BC210 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF8B37C265D551A00D8AF12 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F15245E26594C4D00A24567 /* Project object */;
 }
