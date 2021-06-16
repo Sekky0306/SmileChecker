@@ -7,19 +7,51 @@
 
 import UIKit
 import RealmSwift
+//import Firebase 
+
+
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet var tableView: UITableView!
+  //  public init?(data: NSData)
+@IBOutlet var tableView: UITableView!
     let realm = try! Realm()
     let addresses = try! Realm().objects(Content.self)
     var notificationToken: NotificationToken?
     var image: UIImage? = nil
+    var check = ""
+    var check2 = ""
+    var check3 = ""
+    var pictures: Results<PictureData>!
+    var photo: NSData
+    var photo1: UIImage? = nil
+    var photo2: UIImage? = nil
+ 
+    
+    // ドキュメントディレクトリの「ファイルURL」（URL型）定義
+     //   var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+
+        // ドキュメントディレクトリの「パス」（String型）定義
+      //  let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+       
+    //笑顔関連
+  /*  let options = VisionFaceDetectorOptions()
+    options.performanceMode = .accurate
+    options.landmarkMode = .all
+    options.classificationMode = .all]
+    lazy var vision = Vision.vision()
+    let faceDetector = vision.faceDetector(options: options) */
+
+    // Real-time contour detection of multiple faces
+   
+   
+
     
     @IBOutlet var label1:UILabel!
     @IBOutlet var label2:UILabel!
     @IBOutlet var label3:UILabel!
     @IBOutlet var photoImageView: UIImageView!
+ 
     
 /*func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -31,9 +63,23 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:
         "Cell", for: indexPath) as! TopicTableViewCell
-        cell.placeTextView.text = addresses[indexPath.row].place
-        cell.topicTextView.text = addresses[indexPath.row].topic
+        cell.place.text = addresses[indexPath.row].place
+        cell.topic.text = addresses[indexPath.row].topic
+        cell.level.text = addresses[indexPath.row].score
+    cell.photoImageView.image =  UIImage(data: addresses[indexPath.row].data as Data)
+      //  let : UIImage? = UIImage(data: data)
+        //cell.photoImageView.image = addresses[indexPath.row].pictureDates
+        
         return cell
+    }
+    
+ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+  {
+        check = addresses[indexPath.row].place
+        check2 = addresses[indexPath.row].topic
+        check3 = addresses[indexPath.row].score
+        photo = addresses[indexPath.row].data
+        performSegue(withIdentifier: "showDetailSegue", sender: nil)
     }
     
     func presentPickerController(sourceType: UIImagePickerController.SourceType){
@@ -44,21 +90,45 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             self.present(picker, animated: true,completion: nil)
         }
     }
+    
+    //cell削除関連
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+        {
+            return true
+        }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  {
+          
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+            self.addresses.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         self.image = info[.originalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
         self.performSegue(withIdentifier: "toRegister", sender: nil)
-        /*let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "toRegister") as! RegisterViewController
-                self.present(ViewController, animated: true, completion: nil)*/
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "toRegister" {
                 let Register: RegisterViewController = segue.destination as! RegisterViewController
                 
                 Register.image = self.image!
+            }else if segue.identifier == "showDetailSegue"{
+                let nextView: CheckViewController = segue.destination as! CheckViewController
+                nextView.argString = check
+                nextView.argString2 = check2
+                nextView.image = photo
+                nextView.argString3 = check3
             }
         }
+    override func viewWillAppear(_ animated: Bool) {
+        if let indexPath = tableView.indexPathForSelectedRow{
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
     
 
     override func viewDidLoad() {
@@ -102,10 +172,22 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
                 
                 self.present(myAlert, animated: true, completion: nil)
             }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Realmの初期化
+        let realm = try! Realm()
+        // Realmから保存されている写真のデータを取得
+        pictures = realm.objects(PictureData.self)
+        // CollectionViewを更新
+       
+    }
+    
+   
+    }
     
  
   
-        }
+        
 
 
 

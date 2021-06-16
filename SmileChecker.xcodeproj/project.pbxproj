@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049BE838061A4B43632D9BBF /* Pods_SmileChecker_SmileCheckerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332912E9B58D9F8092B69E40 /* Pods_SmileChecker_SmileCheckerUITests.framework */; };
+		059B9960ABFAC3091CA49E02 /* Pods_SmileChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890387F5B0CABD8403195B0A /* Pods_SmileChecker.framework */; };
+		0F68A89E10A03C08D0324990 /* Pods_SmileCheckerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88BB91542B834DC4AABBCE4 /* Pods_SmileCheckerTests.framework */; };
+		9F065795266CB3880071CA1F /* AWSRekognition in Frameworks */ = {isa = PBXBuildFile; productRef = 9F065794266CB3880071CA1F /* AWSRekognition */; };
 		9F1508D6265A46D8005D0AFB /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1508D5265A46D8005D0AFB /* CheckViewController.swift */; };
 		9F1508D8265A46F2005D0AFB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1508D7265A46F2005D0AFB /* RegisterViewController.swift */; };
 		9F152155265EAA15009BC210 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9F152154265EAA15009BC210 /* Realm */; };
@@ -20,6 +24,7 @@
 		9F15247626594C5000A24567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F15247426594C5000A24567 /* LaunchScreen.storyboard */; };
 		9F15248126594C5000A24567 /* SmileCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15248026594C5000A24567 /* SmileCheckerTests.swift */; };
 		9F15248C26594C5000A24567 /* SmileCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15248B26594C5000A24567 /* SmileCheckerUITests.swift */; };
+		9FC76A572670955000B0AF1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FC76A562670955000B0AF1A /* GoogleService-Info.plist */; };
 		9FF8B37E265D559E00D8AF12 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8B37D265D559E00D8AF12 /* Data.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332912E9B58D9F8092B69E40 /* Pods_SmileChecker_SmileCheckerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileChecker_SmileCheckerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F8B2E41FFF41437A9D340C6 /* Pods-SmileChecker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileChecker.release.xcconfig"; path = "Target Support Files/Pods-SmileChecker/Pods-SmileChecker.release.xcconfig"; sourceTree = "<group>"; };
+		890387F5B0CABD8403195B0A /* Pods_SmileChecker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileChecker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1508D5265A46D8005D0AFB /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		9F1508D7265A46F2005D0AFB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9F152158265EACEB009BC210 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
@@ -58,7 +66,14 @@
 		9F15248726594C5000A24567 /* SmileCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmileCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F15248B26594C5000A24567 /* SmileCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileCheckerUITests.swift; sourceTree = "<group>"; };
 		9F15248D26594C5000A24567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC76A562670955000B0AF1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FF8B37D265D559E00D8AF12 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		C88BB91542B834DC4AABBCE4 /* Pods_SmileCheckerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileCheckerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE76B568CBCC17962E4C758 /* Pods-SmileChecker-SmileCheckerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileChecker-SmileCheckerUITests.debug.xcconfig"; path = "Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6B47F4B61EAF1B1A398F256 /* Pods-SmileCheckerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileCheckerTests.release.xcconfig"; path = "Target Support Files/Pods-SmileCheckerTests/Pods-SmileCheckerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE3BF60B1CB2636270718C1E /* Pods-SmileChecker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileChecker.debug.xcconfig"; path = "Target Support Files/Pods-SmileChecker/Pods-SmileChecker.debug.xcconfig"; sourceTree = "<group>"; };
+		E0E53F8A4DACDE3573491FA9 /* Pods-SmileCheckerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileCheckerTests.debug.xcconfig"; path = "Target Support Files/Pods-SmileCheckerTests/Pods-SmileCheckerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E406DFEF87660575DDD09BEA /* Pods-SmileChecker-SmileCheckerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileChecker-SmileCheckerUITests.release.xcconfig"; path = "Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +83,8 @@
 			files = (
 				9F152157265EAA19009BC210 /* RealmSwift in Frameworks */,
 				9F152155265EAA15009BC210 /* Realm in Frameworks */,
+				9F065795266CB3880071CA1F /* AWSRekognition in Frameworks */,
+				059B9960ABFAC3091CA49E02 /* Pods_SmileChecker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F68A89E10A03C08D0324990 /* Pods_SmileCheckerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,15 +100,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049BE838061A4B43632D9BBF /* Pods_SmileChecker_SmileCheckerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9914DC2DFD9DF4AE9C064EC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE3BF60B1CB2636270718C1E /* Pods-SmileChecker.debug.xcconfig */,
+				4F8B2E41FFF41437A9D340C6 /* Pods-SmileChecker.release.xcconfig */,
+				CDE76B568CBCC17962E4C758 /* Pods-SmileChecker-SmileCheckerUITests.debug.xcconfig */,
+				E406DFEF87660575DDD09BEA /* Pods-SmileChecker-SmileCheckerUITests.release.xcconfig */,
+				E0E53F8A4DACDE3573491FA9 /* Pods-SmileCheckerTests.debug.xcconfig */,
+				D6B47F4B61EAF1B1A398F256 /* Pods-SmileCheckerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9F152153265EAA15009BC210 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				890387F5B0CABD8403195B0A /* Pods_SmileChecker.framework */,
+				332912E9B58D9F8092B69E40 /* Pods_SmileChecker_SmileCheckerUITests.framework */,
+				C88BB91542B834DC4AABBCE4 /* Pods_SmileCheckerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +138,7 @@
 				9F15248A26594C5000A24567 /* SmileCheckerUITests */,
 				9F15246726594C4D00A24567 /* Products */,
 				9F152153265EAA15009BC210 /* Frameworks */,
+				9914DC2DFD9DF4AE9C064EC2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +164,7 @@
 				9F15247226594C5000A24567 /* Assets.xcassets */,
 				9F15247426594C5000A24567 /* LaunchScreen.storyboard */,
 				9F15247726594C5000A24567 /* Info.plist */,
+				9FC76A562670955000B0AF1A /* GoogleService-Info.plist */,
 				9FF8B37D265D559E00D8AF12 /* Data.swift */,
 				9F152158265EACEB009BC210 /* TopicTableViewCell.swift */,
 			);
@@ -159,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F15249026594C5000A24567 /* Build configuration list for PBXNativeTarget "SmileChecker" */;
 			buildPhases = (
+				54728B83FAF419670064DD37 /* [CP] Check Pods Manifest.lock */,
 				9F15246226594C4D00A24567 /* Sources */,
 				9F15246326594C4D00A24567 /* Frameworks */,
 				9F15246426594C4D00A24567 /* Resources */,
+				9C31CDFAD2CD60E4CE760A70 /* [CP] Embed Pods Frameworks */,
+				9FB288A3DA54CD6BBD9C6BDB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +211,7 @@
 			packageProductDependencies = (
 				9F152154265EAA15009BC210 /* Realm */,
 				9F152156265EAA19009BC210 /* RealmSwift */,
+				9F065794266CB3880071CA1F /* AWSRekognition */,
 			);
 			productName = SmileChecker;
 			productReference = 9F15246626594C4D00A24567 /* SmileChecker.app */;
@@ -180,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F15249326594C5000A24567 /* Build configuration list for PBXNativeTarget "SmileCheckerTests" */;
 			buildPhases = (
+				E17A2D2436A62F5DE388DA28 /* [CP] Check Pods Manifest.lock */,
 				9F15247826594C5000A24567 /* Sources */,
 				9F15247926594C5000A24567 /* Frameworks */,
 				9F15247A26594C5000A24567 /* Resources */,
@@ -198,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F15249626594C5000A24567 /* Build configuration list for PBXNativeTarget "SmileCheckerUITests" */;
 			buildPhases = (
+				8DF0AEF6E8468CBE71C019DD /* [CP] Check Pods Manifest.lock */,
 				9F15248326594C5000A24567 /* Sources */,
 				9F15248426594C5000A24567 /* Frameworks */,
 				9F15248526594C5000A24567 /* Resources */,
+				B4B5D38597D8716056C00B04 /* [CP] Embed Pods Frameworks */,
+				FCC51D99C4348E0BF472DD13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +290,7 @@
 			mainGroup = 9F15245D26594C4D00A24567;
 			packageReferences = (
 				9FF8B37C265D551A00D8AF12 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				9F065793266CB3880071CA1F /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */,
 			);
 			productRefGroup = 9F15246726594C4D00A24567 /* Products */;
 			projectDirPath = "";
@@ -263,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F15247626594C5000A24567 /* LaunchScreen.storyboard in Resources */,
+				9FC76A572670955000B0AF1A /* GoogleService-Info.plist in Resources */,
 				9F15247326594C5000A24567 /* Assets.xcassets in Resources */,
 				9F15247126594C4D00A24567 /* Main.storyboard in Resources */,
 			);
@@ -283,6 +330,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54728B83FAF419670064DD37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmileChecker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DF0AEF6E8468CBE71C019DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmileChecker-SmileCheckerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C31CDFAD2CD60E4CE760A70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker/Pods-SmileChecker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker/Pods-SmileChecker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmileChecker/Pods-SmileChecker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB288A3DA54CD6BBD9C6BDB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker/Pods-SmileChecker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker/Pods-SmileChecker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmileChecker/Pods-SmileChecker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B5D38597D8716056C00B04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E17A2D2436A62F5DE388DA28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmileCheckerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCC51D99C4348E0BF472DD13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmileChecker-SmileCheckerUITests/Pods-SmileChecker-SmileCheckerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F15246226594C4D00A24567 /* Sources */ = {
@@ -468,12 +652,13 @@
 		};
 		9F15249126594C5000A24567 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE3BF60B1CB2636270718C1E /* Pods-SmileChecker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = NA63W49YD4;
 				INFOPLIST_FILE = SmileChecker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -491,12 +676,13 @@
 		};
 		9F15249226594C5000A24567 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F8B2E41FFF41437A9D340C6 /* Pods-SmileChecker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = NA63W49YD4;
 				INFOPLIST_FILE = SmileChecker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -514,6 +700,7 @@
 		};
 		9F15249426594C5000A24567 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0E53F8A4DACDE3573491FA9 /* Pods-SmileCheckerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +722,7 @@
 		};
 		9F15249526594C5000A24567 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B47F4B61EAF1B1A398F256 /* Pods-SmileCheckerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,6 +744,7 @@
 		};
 		9F15249726594C5000A24567 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDE76B568CBCC17962E4C758 /* Pods-SmileChecker-SmileCheckerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -575,6 +764,7 @@
 		};
 		9F15249826594C5000A24567 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E406DFEF87660575DDD09BEA /* Pods-SmileChecker-SmileCheckerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -634,6 +824,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9F065793266CB3880071CA1F /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/aws-sdk-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.24.2;
+			};
+		};
 		9FF8B37C265D551A00D8AF12 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
@@ -645,6 +843,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9F065794266CB3880071CA1F /* AWSRekognition */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F065793266CB3880071CA1F /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
+			productName = AWSRekognition;
+		};
 		9F152154265EAA15009BC210 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9FF8B37C265D551A00D8AF12 /* XCRemoteSwiftPackageReference "realm-cocoa" */;

@@ -9,8 +9,10 @@ import UIKit
 
 class TopicTableViewCell: UITableViewCell {
     
-    @IBOutlet var placeTextView: UITextView!
-    @IBOutlet var topicTextView: UITextView!
+    @IBOutlet var place: UILabel!
+    @IBOutlet var topic: UILabel!
+    @IBOutlet var level: UILabel!
+    @IBOutlet var photoImageView: UIImageView!
    
    /* override func awakeFromNib() {
         super.awakeFromNib()
