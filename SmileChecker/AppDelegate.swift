@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import MLKit
-import MLKitFaceDetection
+//import MLKit
+//import MLKitFaceDetection
 //import Firebase
 
 @main

@@ -7,7 +7,7 @@
 
 import UIKit
 import RealmSwift
-import MLKitFaceDetection
+//import MLKitFaceDetection
 //import Firebase
 
 
@@ -21,7 +21,7 @@ class CheckViewController: UIViewController {
     var notificationToken: NotificationToken?
     var argString = ""
     var argString2 = ""
-    var argString3 = ""
+    //var argString3 = ""
     var image: NSData!
     
   
@@ -30,7 +30,7 @@ class CheckViewController: UIViewController {
         super.viewDidLoad()
         placeTextView.text = argString
         topicTextView.text = argString2
-        label1.text = argString3
+        //label1.text = argString3
         photoImageView.image = UIImage(data: image as Data)!
         self.placeTextView.isEditable = false
         self.topicTextView.isEditable = false

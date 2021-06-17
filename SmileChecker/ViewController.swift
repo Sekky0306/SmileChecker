@@ -23,7 +23,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     var check2 = ""
     var check3 = ""
     var pictures: Results<PictureData>!
-    var photo: NSData
+    var photo: NSData!
     var photo1: UIImage? = nil
     var photo2: UIImage? = nil
  
@@ -47,11 +47,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
    
 
     
-    @IBOutlet var label1:UILabel!
+    /*@IBOutlet var label1:UILabel!
     @IBOutlet var label2:UILabel!
     @IBOutlet var label3:UILabel!
     @IBOutlet var photoImageView: UIImageView!
- 
+ */
     
 /*func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -65,7 +65,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         "Cell", for: indexPath) as! TopicTableViewCell
         cell.place.text = addresses[indexPath.row].place
         cell.topic.text = addresses[indexPath.row].topic
-        cell.level.text = addresses[indexPath.row].score
+        //cell.level.text = addresses[indexPath.row].score
     cell.photoImageView.image =  UIImage(data: addresses[indexPath.row].data as Data)
       //  let : UIImage? = UIImage(data: data)
         //cell.photoImageView.image = addresses[indexPath.row].pictureDates
@@ -77,9 +77,10 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
   {
         check = addresses[indexPath.row].place
         check2 = addresses[indexPath.row].topic
-        check3 = addresses[indexPath.row].score
+       // check3 = addresses[indexPath.row].score
         photo = addresses[indexPath.row].data
         performSegue(withIdentifier: "showDetailSegue", sender: nil)
+     tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func presentPickerController(sourceType: UIImagePickerController.SourceType){
@@ -89,10 +90,11 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             picker.delegate = self
             self.present(picker, animated: true,completion: nil)
         }
+      
     }
     
     //cell削除関連
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    /* func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
         {
             return true
         }
@@ -102,34 +104,66 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             self.addresses.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        }
+        }*/
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         self.image = info[.originalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toRegister", sender: nil)
+        
+        
+        guard let image4 = info[.originalImage] as? UIImage, let cgImage = image4.cgImage else {
+            return
+        }
+        // storyboardに置いたimageViewからCIImageを生成する
+        let ciImage = CIImage(cgImage: cgImage)
+
+        // 顔認識なのでTypeをCIDetectorTypeFaceに指定する
+        let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+
+        // 取得するパラメーターを指定する
+        let options = [CIDetectorSmile : true]
+
+        // 画像から特徴を抽出する
+        let features = detector?.features(in: ciImage, options: options)
+        
+        for feature in features as! [CIFaceFeature] {
+            if feature.hasSmile == true{
+                self.performSegue(withIdentifier: "toRegister", sender: nil)
+            }
+        }
+
+       // var resultString = "DETECTED FACES:\n\n"
+
+        /*for feature in features as! [CIFaceFeature] {
+            resultString.append("bounds: \(NSCoder.string(for: feature.bounds))\n")
+            resultString.append("hasSmile: \(feature.hasSmile ? "YES" : "NO")\n")
+
+            resultString.append("\n")
+        }*/
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "toRegister" {
                 let Register: RegisterViewController = segue.destination as! RegisterViewController
                 
-                Register.image = self.image!
+                Register.image3 = self.image!
             }else if segue.identifier == "showDetailSegue"{
                 let nextView: CheckViewController = segue.destination as! CheckViewController
                 nextView.argString = check
                 nextView.argString2 = check2
                 nextView.image = photo
-                nextView.argString3 = check3
+               // nextView.argString3 = check3
             }
         }
-    override func viewWillAppear(_ animated: Bool) {
+ /*   override func viewWillAppear(_ animated: Bool) {
         if let indexPath = tableView.indexPathForSelectedRow{
             tableView.deselectRow(at: indexPath, animated: true)
         }
-    }
-    
+    }*/
+   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 200
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()

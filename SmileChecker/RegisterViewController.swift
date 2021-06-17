@@ -10,8 +10,8 @@ import UIKit
 import RealmSwift
 //import Firebase
 //import CoreML
-import MLKit
-import MLKitFaceDetection
+//import MLKit
+//import MLKitFaceDetection
 
 
 
@@ -24,26 +24,27 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,U
     let realm = try! Realm()
     let addresses = try! Realm().objects(Content.self)
     var notificationToken: NotificationToken?
-    var image: UIImage? = nil
+    var image3: UIImage? = nil
     //var visionImage: FIRVisionImage? = nil
    
   
-  /*  func presentPickerController(sourceType: UIImagePickerController.SourceType){
+    func presentPickerController(sourceType: UIImagePickerController.SourceType){
         if UIImagePickerController.isSourceTypeAvailable(sourceType){
             let picker = UIImagePickerController()
             picker.sourceType = sourceType
             picker.delegate = self
             self.present(picker, animated: true,completion: nil)
         }
-    }　*/
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.dismiss(animated: true, completion: nil)
-        registerImageView.image = info[.originalImage]as?UIImage
+      //  registerImageView.image = info[.originalImage]as?UIImage
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let options = FaceDetectorOptions()
+        registerImageView.image = image3
+      /*  let options = FaceDetectorOptions()
         options.performanceMode = .accurate
         options.landmarkMode = .all
         options.classificationMode = .all
@@ -76,9 +77,36 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,U
             level.text = String("\(smileProb*10)点")
         } else {
             level.text = String("認識失敗")
+        }*/
+        guard let image2 = self.registerImageView.image, let cgImage = image2.cgImage else {
+            return
         }
-      
-         
+
+        // storyboardに置いたimageViewからCIImageを生成する
+        let ciImage = CIImage(cgImage: cgImage)
+
+        // 顔認識なのでTypeをCIDetectorTypeFaceに指定する
+        let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+
+        // 取得するパラメーターを指定する
+        let options = [CIDetectorSmile : true]
+
+        // 画像から特徴を抽出する
+        let features = detector?.features(in: ciImage, options: options)
+
+        var resultString = "DETECTED FACES:\n\n"
+
+        for feature in features as! [CIFaceFeature] {
+            resultString.append("hasSmile: \(feature.hasSmile ? "YES" : "NO")\n")
+
+           // resultString.append("\n")
+        }
+        if options == [CIDetectorSmile : true]{
+            
+    
+        level.text = String(resultString)
+       
+        }
         }
     
 
@@ -87,9 +115,9 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,U
       
  newContent.place = placeTextView.text!
  newContent.topic = topicTextView.text!
-newContent.score = level.text!
-let image = info[.originalImage] as! UIImage
-let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
+ //newContent.score = level.text!
+    let image = registerImageView.image!
+    let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
     newContent.data = data
     
     try! realm.write {
